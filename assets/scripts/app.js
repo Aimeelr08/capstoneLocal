@@ -5,6 +5,4 @@ const app = {
 host: 'https://backendcapstonelocal.herokuapp.com/'
 };
 
-module.exports = {
-  app
-}
+module.exports = app;
