@@ -40,7 +40,7 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  $('.welcome').text('Welcome Back' + '"' + data.user.email + '"' )
+  $('.welcome').text('Welcome' + '"' + data.user.email + '"' )
   $('.prompt').text('Please click on Delete All to make brand new posts')
   $('.prompts').text('Please click on Delete All to make brand new posts')
 

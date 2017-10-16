@@ -28,19 +28,18 @@ const getPosts = function (data, b) {
 // "title": "Sample Title 1",
 // "body": "Sample body 1"
 
-const makePosts = function (data) {
-  console.log('POST API')
+const makePosts = function (data, a) {
+  console.log('api create Post made')
   return $.ajax({
     url: app.host + '/posts',
     method: 'POST',
     contentType: 'application/json; charset=utf-8',
     dataType: 'json',
     data: data,
-    success: function(response, data, jqXhr) {
-      console.log(successful)
-      // console.log(a)
-      // console.log(b)
-      // console.log(c)
+    success: function(data) {
+      console.log(a)
+      console.log(b)
+      console.log(c)
       //$('.post').append('<div>' + '<h5>Id:</h5>' + posts[i].id + '' + '<h5>Title:</h5><br><h2> ' + headerInput.title + '</h2><br>' + '<h5> Post:</h5><br><h3>' + bodyInput.body + '</h3> </div> <br><br>')
       // for (let i = 0; i < posts.length; i++) {
         // var id = JSON.stringify(posts[i].id)
@@ -53,18 +52,13 @@ const makePosts = function (data) {
   })
 
 }
-const deletePosts = function () {
+const deletePosts = function (data, c) {
+  console.log('api delete Post made')
   return $.ajax({
     url: app.host + '/posts',
     method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-    },
-    success: function () {
-      console.log('SUCCESS')
-    },
-    error: function () {
-      console.error()
+    success: function(data) {
+      console.log(c)
     }
   })
 }
